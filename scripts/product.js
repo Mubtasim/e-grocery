@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
   async function renderProduct() {
     const product = await getProductById(productId);
     productNameEl.innerText = `Name: ${product.name}`;
-    productPriceEl.innerText = `Price: ${product.price}`;
+    productPriceEl.innerText = `Price: ${product.unitPrice}`;
   }
 
   renderProduct();

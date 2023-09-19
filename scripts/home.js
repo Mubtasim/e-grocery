@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const products = await getProducts();
     let result = "";
     products.forEach((product) => {
-      result += `<li><a href="/pages/product/index.html?id=${product.id}">${product.name}</a></li>`;
+      result += `<li class='product-item'><a href="/pages/product/index.html?id=${product.id}">${product.name}</a></li>`;
     });
     productListEl.innerHTML = result;
   }

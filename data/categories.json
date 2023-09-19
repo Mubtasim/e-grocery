@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "fruites & vegetables",
+    "imageUrl": "https://chaldn.com/_mpimage/fresh-vegetables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D23773&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": "2",
+    "name": "meat & fish",
+    "imageUrl": "https://chaldn.com/_mpimage/premium-perishables?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D132312&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "3",
+    "name": "cooking",
+    "imageUrl": "https://chaldn.com/_mpimage/special-ingredients?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D117039&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": "4",
+    "name": "sauces & pickles",
+    "imageUrl": "https://chaldn.com/_mpimage/tomato-sauces?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D116629&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": "5",
+    "name": "dairy & eggs",
+    "imageUrl": "https://chaldn.com/_mpimage/powder-milk?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D133638&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "6",
+    "name": "candy & chocolate",
+    "imageUrl": "https://chaldn.com/_mpimage/chocolates?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D119182&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": "7",
+    "name": "snacks",
+    "imageUrl": "https://chaldn.com/_mpimage/noodles?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D101156&q=low&v=1&m=400&webp=1"
+  },
+  {
+    "id": "8",
+    "name": "beverages",
+    "imageUrl": "https://chaldn.com/_mpimage/soft-drinks?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D27882&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "9",
+    "name": "home & kitchen",
+    "imageUrl": "https://chaldn.com/_mpimage/kitchen-appliances?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D29089&q=best&v=1&m=400&webp=1"
+  }
+]
