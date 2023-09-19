@@ -3,11 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles/base.css" />
     <title>E-Grocery</title>
   </head>
   <body>
-    <script>
-      window.location.href = "/pages/home";
-    </script>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-apps-2-fill"></i>
+        </div>
+        <a href="#" class="nav__logo">E-Grocery</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <h4>Categories</h4>
+          <ul class="nav__list" id="nav-list"></ul>
+
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main>
+      <!--==================== HOME ====================-->
+      <section class="home"></section>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="./scripts/main.js" type="module"></script>
   </body>
 </html>

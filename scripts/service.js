@@ -1,6 +1,9 @@
+const PRODUCT_URL = "../../data/products.json";
+const CATEGORIES_URL = "../../data/categories.json";
+
 async function getProducts() {
   try {
-    const result = await fetch("../../data/products.json");
+    const result = await fetch(PRODUCT_URL);
     const data = await result.json();
     return data;
   } catch (error) {
@@ -18,4 +21,14 @@ async function getProductById(id) {
   }
 }
 
-export { getProducts, getProductById };
+async function getCategories() {
+  try {
+    const result = await fetch(CATEGORIES_URL);
+    const data = await result.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export { getProducts, getProductById, getCategories };
