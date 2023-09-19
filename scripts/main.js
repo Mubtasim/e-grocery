@@ -1,32 +1,20 @@
 import { getCategories } from "./service.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-  /*=============== SHOW MENU ===============*/
+  /*=============== TOGGLE MENU ===============*/
   const navMenu = document.getElementById("nav-menu"),
-    navToggle = document.getElementById("nav-toggle");
-  // navClose = document.getElementById("nav-close");
+    navToggle = document.getElementById("nav-toggle"),
+    mainEl = document.getElementById("main");
 
-  // MENU SHOW
   if (navToggle) {
     navToggle.addEventListener("click", () => {
       navMenu.classList.toggle("show-menu");
       navToggle.classList.toggle("rotate__toggle");
+      mainEl.classList.toggle("reduced__main");
     });
   }
 
-  // MENU HIDDEN
-  //   if (navClose) {
-  //     navClose.addEventListener("click", () => {
-  //       navMenu.classList.remove("show-menu");
-  //     });
-  //   }
-
-  /*=============== REMOVE MENU MOBILE ===============*/
-
-  /*=============== SWIPER SHOE ===============*/
-
-  /*=============== SHADOW HEADER ===============*/
-
+  /*=============== RENDER NAV CATEGORIES ===============*/
   const navListEl = document.getElementById("nav-list");
   async function renderCategoriesNav() {
     const categories = await getCategories();
