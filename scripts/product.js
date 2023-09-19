@@ -1,4 +1,4 @@
-import { getProducts } from "./service.js";
+import { getProductById } from "./service.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   let params = new URL(document.location).searchParams;
@@ -6,14 +6,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const productNameEl = document.getElementById("product-name");
   const productPriceEl = document.getElementById("product-price");
 
-  async function getProduct(id) {
-    const products = await getProducts();
-    const product = products.find((product) => product.id === id);
-    return product;
-  }
-
   async function renderProduct() {
-    const product = await getProduct(productId);
+    const product = await getProductById(productId);
     productNameEl.innerText = `Name: ${product.name}`;
     productPriceEl.innerText = `Price: ${product.price}`;
   }
