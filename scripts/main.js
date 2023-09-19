@@ -3,22 +3,23 @@ import { getCategories } from "./service.js";
 window.addEventListener("DOMContentLoaded", () => {
   /*=============== SHOW MENU ===============*/
   const navMenu = document.getElementById("nav-menu"),
-    navToggle = document.getElementById("nav-toggle"),
-    navClose = document.getElementById("nav-close");
+    navToggle = document.getElementById("nav-toggle");
+  // navClose = document.getElementById("nav-close");
 
   // MENU SHOW
   if (navToggle) {
     navToggle.addEventListener("click", () => {
-      navMenu.classList.add("show-menu");
+      navMenu.classList.toggle("show-menu");
+      navToggle.classList.toggle("rotate__toggle");
     });
   }
 
-  //   MENU HIDDEN
-  if (navClose) {
-    navClose.addEventListener("click", () => {
-      navMenu.classList.remove("show-menu");
-    });
-  }
+  // MENU HIDDEN
+  //   if (navClose) {
+  //     navClose.addEventListener("click", () => {
+  //       navMenu.classList.remove("show-menu");
+  //     });
+  //   }
 
   /*=============== REMOVE MENU MOBILE ===============*/
 
@@ -33,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
     categories.forEach((category) => {
       result += `
             <li class="nav__item">
-            <a href="#">${category.name}</a>
+            <a href="#" class="nav__link">${category.name}</a>
           </li>
             `;
     });

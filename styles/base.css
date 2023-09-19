@@ -208,13 +208,21 @@ button:hover,
   cursor: pointer;
 }
 
+.nav__toggle {
+  transition: transform 0.5s;
+}
+
+.rotate__toggle {
+  transform: rotate(-90deg);
+}
+
 .nav__menu {
   position: fixed;
   top: 0;
   left: -100%;
   background-color: var(--body-color);
   box-shadow: 0 20px 16px hsla(0, 0%, 0%, 0.1);
-  width: 80%;
+  /* width: 80%; */
   max-width: 320px;
   height: calc(100% - var(--header-height));
   padding: 6rem 3rem;
@@ -231,6 +239,7 @@ button:hover,
 
 .nav__link {
   color: var(--title-color);
+  text-transform: capitalize;
 }
 
 .nav__close {
@@ -243,7 +252,7 @@ button:hover,
   left: 0;
 }
 
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .nav__toggle,
   .nav__close {
     display: none;
@@ -251,4 +260,4 @@ button:hover,
   .nav__menu {
     left: 0;
   }
-}
+} */
