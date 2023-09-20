@@ -21,8 +21,28 @@ function getTargetSegment() {
 function getQueryValueByParam(param) {
   const currentUrlProperties = new URL(document.location);
   const currentQueryValue = currentUrlProperties.searchParams.get(param);
-  console.log(currentQueryValue);
   return currentQueryValue;
+}
+
+function getNavigationHTML(innerNavigations) {
+  //   let result = `<section class="section innerNavigation">Hello World</section>`;
+  let result = "";
+  innerNavigations.forEach((navigation, idx) => {
+    result += `
+        <div class="innerNavigation__item">
+            ${
+              idx > 0
+                ? '<i class="ri-arrow-right-s-line innerNavigation__arrow"></i>'
+                : ""
+            }
+            <a href=${navigation.url} class="innerNavigation__link">${
+      navigation.navName
+    }</a>
+        </div>
+    `;
+  });
+  result = `<section class="section innerNavigation">${result}</section>`;
+  return result;
 }
 
 async function setCurrentInnerNavigations(targetSegment) {
@@ -30,8 +50,7 @@ async function setCurrentInnerNavigations(targetSegment) {
   const categoriesUrl = `/pages/${CATEGORY_URL_SEGMENT}`;
   if (targetSegment === PRODUCTS_URL_SEGMENT) {
     const categoryId = getQueryValueByParam(CATEGORY_QUERY);
-    const categoryUrl = `/pages/${PRODUCTS_URL_SEGMENT}?${CATEGORY_QUERY}=${categoryId}`;
-    console.log("categoryid", categoryId);
+    const categoryUrl = `/pages/${PRODUCTS_URL_SEGMENT}/index.html?${CATEGORY_QUERY}=${categoryId}`;
     const category = await getCategoryById(categoryId);
     const categoryName = category.name;
     innerNavigations = [
@@ -55,7 +74,7 @@ async function setCurrentInnerNavigations(targetSegment) {
   }
   if (innerNavigations.length > 0) {
     const innerContainerEl = document.getElementById("inner-container");
-    let result = `<section class="section">Hello World</section>`;
+    const result = getNavigationHTML(innerNavigations);
     innerContainerEl.innerHTML = result + innerContainerEl.innerHTML;
   }
 }

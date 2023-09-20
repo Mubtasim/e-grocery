@@ -187,7 +187,7 @@ button:hover,
 }
 
 .section {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .section__title {
@@ -300,4 +300,22 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.innerNavigation {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.innerNavigation__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.innerNavigation__link {
+  color: var(--title-color);
+  text-transform: capitalize;
+  text-decoration: underline;
 }

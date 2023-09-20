@@ -6,8 +6,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   async function renderProducts() {
     const currentCategory = await getCategoryById(categoryId);
-    const categoryTitleEl = document.getElementById("category-title");
-    categoryTitleEl.innerHTML = currentCategory.name;
   }
 
   renderProducts();
