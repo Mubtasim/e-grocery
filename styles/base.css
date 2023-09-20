@@ -14,7 +14,8 @@
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 65%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+  --text-color-light: hsl(var(--hue-color), 8%, 85%);
+  --text-color-lighter: hsl(var(--hue-color), 8%, 95%);
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
@@ -224,24 +225,36 @@ button:hover,
   left: -100%;
   background-color: var(--body-color);
   box-shadow: 0 20px 16px hsla(0, 0%, 0%, 0.1);
-  /* width: 80%; */
   width: var(--menu-width);
   height: calc(100% - var(--header-height));
-  padding: 6rem 3rem;
+  padding: 1rem 1.5rem;
   transition: left 0.4s;
   margin-top: var(--header-height);
-  /* z-index: -10; */
-}
-
-.nav__list {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
 
+.nav__heading {
+  font-weight: var(--font-medium);
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  overflow-y: auto;
+}
+
+.nav__item {
+  border-bottom: 1px solid var(--text-color-lighter);
+}
+
 .nav__link {
   color: var(--title-color);
   text-transform: capitalize;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
 }
 
 .nav__close {
