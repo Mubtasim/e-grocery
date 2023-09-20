@@ -4,9 +4,9 @@
   --header-height: 4rem;
 
   /* --hue-color: 340; */
-  /* --hue-color: 125; */
+  --hue-color: 125;
   /* --hue-color: 1; */
-  --hue-color: 340;
+  /* --hue-color: 340; */
 
   --first-color: hsl(var(--hue-color), 69%, 61%);
   --first-color-second: hsl(var(--hue-color), 69%, 61%);
@@ -97,7 +97,7 @@ a {
   cursor: pointer;
 }
 
-a:link {
+/* a:link {
   color: var(--text-color);
 }
 
@@ -111,7 +111,7 @@ a:hover {
 
 a:active {
   color: var(--text-color);
-}
+} */
 
 img {
   max-width: 100%;
@@ -131,7 +131,7 @@ button,
   border: hidden;
   outline: none;
   border-radius: 1em;
-  padding: 1em;
+  padding: 0.7em;
   transition: 0.05s;
   display: inline-block;
   cursor: pointer;
@@ -203,11 +203,16 @@ button:hover,
   box-shadow: -1px 0 16px hsla(0, 0%, 0%, 0.1);
 }
 
+.nav__logo {
+  color: var(--first-color-alt);
+}
+
 .nav__toggle,
 .nav__close {
   display: flex;
   font-size: 1.25rem;
-  color: var(--title-color);
+  /* color: var(--title-color); */
+  color: var(--first-color-alt);
   cursor: pointer;
 }
 

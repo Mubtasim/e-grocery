@@ -3,15 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Grocery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      crossorigin=""
+    />
     <link rel="stylesheet" href="../../styles/base.css" />
     <link rel="stylesheet" href="./categories.css" />
+    <title>E-Grocery</title>
   </head>
   <body>
-    <div class="container">
-      <h1>E-Grocery</h1>
-      <ul id="category-list"></ul>
-    </div>
-    <script src="../../scripts//categories.js" type="module"></script>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-apps-2-fill"></i>
+        </div>
+        <a href="/" class="nav__logo">E-Grocery</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <h5 class="nav__heading">Categories</h5>
+          <ul class="nav__list" id="nav-list"></ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main id="main">
+      <!--==================== HOME ====================-->
+      <div class="container">
+        <h1>E-Grocery</h1>
+        <ul id="category-list"></ul>
+      </div>
+    </main>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="../../scripts/main.js" type="module"></script>
   </body>
 </html>
