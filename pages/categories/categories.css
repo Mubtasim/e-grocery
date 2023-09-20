@@ -1,0 +1,27 @@
+.category__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.category__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card-background-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+}
+
+.category__image {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.category__name {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+}

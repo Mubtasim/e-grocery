@@ -8,17 +8,17 @@ window.addEventListener("DOMContentLoaded", () => {
     let result = "";
     categories.forEach((category) => {
       result += `
-      <div class="category__item">
+      <a class="category__item" href="/pages/products/index.html?categoryId=${category.id}">
         <img
           src=${category.imageUrl}
           class="category__image"
         />
         <div class="category__name">${category.name}</div>
-      </div>
+      </a>
       `;
     });
     categoryListEl.innerHTML = result;
   }
 
-  // renderCategories();
+  renderCategories();
 });
