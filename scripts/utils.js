@@ -79,4 +79,4 @@ async function setCurrentInnerNavigations(targetSegment) {
   }
 }
 
-export { getTargetSegment, setCurrentInnerNavigations };
+export { getTargetSegment, setCurrentInnerNavigations, getQueryValueByParam };

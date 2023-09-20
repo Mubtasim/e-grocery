@@ -21,6 +21,18 @@ async function getProductById(id) {
   }
 }
 
+async function getProductsByCategoryId(categoryId) {
+  try {
+    const products = await getProducts();
+    const productsOfCategory = products.filter(
+      (product) => product.categoryId === categoryId
+    );
+    return productsOfCategory;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 async function getCategories() {
   try {
     const result = await fetch(CATEGORIES_URL);
@@ -41,4 +53,10 @@ async function getCategoryById(id) {
   }
 }
 
-export { getProducts, getProductById, getCategories, getCategoryById };
+export {
+  getProducts,
+  getProductById,
+  getCategories,
+  getCategoryById,
+  getProductsByCategoryId,
+};
