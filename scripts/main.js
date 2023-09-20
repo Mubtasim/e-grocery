@@ -1,3 +1,4 @@
+import { POSSIBLE_URL_SEGMENTS } from "./constants.js";
 import { getCategories } from "./service.js";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -29,4 +30,8 @@ window.addEventListener("DOMContentLoaded", () => {
     navListEl.innerHTML = result;
   }
   renderCategoriesNav();
+
+  /*=============== RENDER INNER NAVIGATIONS ===============*/
+  const currentPathName = document.location.pathname;
+  const currentSegments = currentPathName.split("/");
 });
