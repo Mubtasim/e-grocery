@@ -31,4 +31,14 @@ async function getCategories() {
   }
 }
 
-export { getProducts, getProductById, getCategories };
+async function getCategoryById(id) {
+  try {
+    const categories = await getCategories();
+    const category = categories.find((category) => category.id === id);
+    return category;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export { getProducts, getProductById, getCategories, getCategoryById };
