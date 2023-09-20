@@ -27,3 +27,21 @@
   text-transform: capitalize;
   text-align: center;
 }
+
+@media screen and (min-width: 620px) {
+  .category__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 970px) {
+  .category__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .category__list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
