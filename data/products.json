@@ -5,7 +5,8 @@
     "unit": "500 gm",
     "unitPrice": 29,
     "categoryId": "1",
-    "description": "Every 500 gm of the product will contain 20-25 pcs of Potol(Pointed Gourd).Potol generally collected from locally source. Potol which is known as a Pointed gourd. Pointed gourd is a very tasty vegetable as well as cheap. Various kind of dishes can be made by Pointed gourd like boiled for stews or soups, cooked as curries or fries, and many more. There are many health benefits of eating Pointed gourd. The vegetable is rated as one of the nutritious foods and is offering vitamins like vitamin A, vitamin B1, vitamin B2 and vitamin C. Calcium provides pointed gourd also offers you very less calories and hence it helps to keep the cholesterol levels in control."
+    "description": "Every 500 gm of the product will contain 20-25 pcs of Potol(Pointed Gourd).Potol generally collected from locally source. Potol which is known as a Pointed gourd. Pointed gourd is a very tasty vegetable as well as cheap. Various kind of dishes can be made by Pointed gourd like boiled for stews or soups, cooked as curries or fries, and many more. There are many health benefits of eating Pointed gourd. The vegetable is rated as one of the nutritious foods and is offering vitamins like vitamin A, vitamin B1, vitamin B2 and vitamin C. Calcium provides pointed gourd also offers you very less calories and hence it helps to keep the cholesterol levels in control.",
+    "imageUrl": "https://chaldn.com/_mpimage/potol-pointed-gourd-25-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D35666&q=best&v=1&m=400&webp=1"
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "unit": "1 kg",
     "unitPrice": 35,
     "categoryId": "1",
-    "description": "Buy regular potato from us which provides you with dietary fiber, potassium, vitamins, etc. Regular potato provides 9-10 percent of your daily need. Regular potatoes offer more of this nutrient which helps control your blood pressure. Make a good curry with regular potato. You can make French fries and you can enjoy with your family members."
+    "description": "Buy regular potato from us which provides you with dietary fiber, potassium, vitamins, etc. Regular potato provides 9-10 percent of your daily need. Regular potatoes offer more of this nutrient which helps control your blood pressure. Make a good curry with regular potato. You can make French fries and you can enjoy with your family members.",
+    "imageUrl": "https://chaldn.com/_mpimage/potato-regular-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D81244&q=best&v=1&m=400&webp=1"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "unit": "500 gm",
     "unitPrice": 399,
     "categoryId": "2",
-    "description": "This is processed and packaged by Chaldal's processing plant. The hygiene is well maintained and the halal way is maintained."
+    "description": "This is processed and packaged by Chaldal's processing plant. The hygiene is well maintained and the halal way is maintained.",
+    "imageUrl": "https://chaldn.com/_mpimage/chaldal-premium-roast-chicken-50-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D133413&q=best&v=1&m=400&webp=1"
   },
   {
     "id": "4",
@@ -29,14 +32,16 @@
     "unit": "1 kg",
     "unitPrice": 839,
     "categoryId": "2",
-    "description": "Introducing our Premium Beef, sourced from oxen aged 2 to 4 years, this delicacy is the perfect blend of flavor and nutrition. With 80% meat and only 20% bone and fat, you can expect tender and juicy cuts of beef with every bite. Experience the richness of well-marbled meat that is sure to elevate your cooking experience. Order now and taste the difference of Premium Beef!"
+    "description": "Introducing our Premium Beef, sourced from oxen aged 2 to 4 years, this delicacy is the perfect blend of flavor and nutrition. With 80% meat and only 20% bone and fat, you can expect tender and juicy cuts of beef with every bite. Experience the richness of well-marbled meat that is sure to elevate your cooking experience. Order now and taste the difference of Premium Beef!",
+    "imageUrl": "https://chaldn.com/_mpimage/chaldal-premium-beef-bone-in-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D131834&q=best&v=1&m=400&webp=1"
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "premium mrigel fish",
     "unit": "500 gm",
     "unitPrice": 269,
     "categoryId": "2",
-    "description": "Mrigel is a carp fish. Its one of the popular fish after Rui fish. It is different for its sweet taste and has Avery unique flavour. Chaldal is offering Best Mrigel cultured with healthy and safe farming practise. In this pack we are offering Medium Sized Mrigel fish which 2000gm to 2500 gm weight while its live. Each pack is 500gm which contains 7 to 11 pieces of fish steak. All of our fishes are processed by our experts and washed with clean water."
+    "description": "Mrigel is a carp fish. Its one of the popular fish after Rui fish. It is different for its sweet taste and has Avery unique flavour. Chaldal is offering Best Mrigel cultured with healthy and safe farming practise. In this pack we are offering Medium Sized Mrigel fish which 2000gm to 2500 gm weight while its live. Each pack is 500gm which contains 7 to 11 pieces of fish steak. All of our fishes are processed by our experts and washed with clean water.",
+    "imageUrl": "https://chaldn.com/_mpimage/chaldal-premium-mrigel-fish-headless-30-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D127446&q=best&v=1&m=400&webp=1"
   }
 ]
