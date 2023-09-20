@@ -21,6 +21,7 @@
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  --card-background-color: hsl(var(--hue-color), 60%, 98.5%);
 
   --body-font: "Poppins", sans-serif;
 
@@ -185,6 +186,42 @@ button:hover,
   padding: 0 1rem;
 }
 
+.section {
+  padding: 2rem 0;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.category__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+.category__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card-background-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.category__image {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.category__name {
+  font-weight: var(--font-semi-bold);
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -211,8 +248,8 @@ button:hover,
 .nav__close {
   display: flex;
   font-size: 1.25rem;
-  /* color: var(--title-color); */
-  color: var(--first-color-alt);
+  color: var(--title-color);
+  /* color: var(--first-color-alt); */
   cursor: pointer;
 }
 

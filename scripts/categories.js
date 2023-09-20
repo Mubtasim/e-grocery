@@ -1,16 +1,24 @@
-import { getProducts } from "./service.js";
+import { getCategories } from "./service.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-  const productListEl = document.getElementById("product-list");
+  const categoryListEl = document.getElementById("category-list");
 
-  async function renderProducts() {
-    const products = await getProducts();
+  async function renderCategories() {
+    const categories = await getCategories();
     let result = "";
-    products.forEach((product) => {
-      result += `<li class='product-item'><a href="/pages/product/index.html?id=${product.id}">${product.name}</a></li>`;
+    categories.forEach((category) => {
+      result += `
+      <div class="category__item">
+        <img
+          src=${category.imageUrl}
+          class="category__image"
+        />
+        <div class="category__name">${category.name}</div>
+      </div>
+      `;
     });
-    productListEl.innerHTML = result;
+    categoryListEl.innerHTML = result;
   }
 
-  renderProducts();
+  // renderCategories();
 });
