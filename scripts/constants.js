@@ -1,3 +1,21 @@
-const POSSIBLE_URL_SEGMENTS = ["categories", "products", "product-details"];
+const CATEGORY_URL_SEGMENT = "categories";
+const PRODUCTS_URL_SEGMENT = "products";
+const PRODUCT_DETAILS_URL_SEGMENT = "product-details";
 
-export { POSSIBLE_URL_SEGMENTS };
+const POSSIBLE_URL_SEGMENTS = [
+  CATEGORY_URL_SEGMENT,
+  PRODUCTS_URL_SEGMENT,
+  PRODUCT_DETAILS_URL_SEGMENT,
+];
+
+const CATEGORY_QUERY = "categoryId";
+const PRODUCT_QUERY = "productId";
+
+export {
+  POSSIBLE_URL_SEGMENTS,
+  CATEGORY_URL_SEGMENT,
+  PRODUCTS_URL_SEGMENT,
+  PRODUCT_DETAILS_URL_SEGMENT,
+  CATEGORY_QUERY,
+  PRODUCT_QUERY,
+};

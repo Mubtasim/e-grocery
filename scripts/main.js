@@ -1,5 +1,5 @@
 import { getCategories } from "./service.js";
-import { getTargetSegment } from "./utils.js";
+import { getTargetSegment, setCurrentInnerNavigations } from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   /*=============== TOGGLE MENU ===============*/
@@ -32,8 +32,6 @@ window.addEventListener("DOMContentLoaded", () => {
   renderCategoriesNav();
 
   /*=============== RENDER INNER NAVIGATIONS ===============*/
-  const currentPathName = document.location.pathname;
-  const currentSegments = currentPathName.split("/");
-  const targetSegment = getTargetSegment(currentSegments);
-  console.log(targetSegment);
+  const targetSegment = getTargetSegment();
+  setCurrentInnerNavigations(targetSegment);
 });
