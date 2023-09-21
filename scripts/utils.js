@@ -45,12 +45,17 @@ function getNavigationHTML(innerNavigations) {
   return result;
 }
 
+function getCategoryUrlByCategoryId(categoryId) {
+  const categoryUrl = `/pages/${PRODUCTS_URL_SEGMENT}/index.html?${CATEGORY_QUERY}=${categoryId}`;
+  return categoryUrl;
+}
+
 async function setCurrentInnerNavigations(targetSegment) {
   let innerNavigations;
   const categoriesUrl = `/pages/${CATEGORY_URL_SEGMENT}`;
   if (targetSegment === PRODUCTS_URL_SEGMENT) {
     const categoryId = getQueryValueByParam(CATEGORY_QUERY);
-    const categoryUrl = `/pages/${PRODUCTS_URL_SEGMENT}/index.html?${CATEGORY_QUERY}=${categoryId}`;
+    const categoryUrl = getCategoryUrlByCategoryId(categoryId);
     const category = await getCategoryById(categoryId);
     const categoryName = category.name;
     innerNavigations = [
@@ -79,4 +84,9 @@ async function setCurrentInnerNavigations(targetSegment) {
   }
 }
 
-export { getTargetSegment, setCurrentInnerNavigations, getQueryValueByParam };
+export {
+  getTargetSegment,
+  setCurrentInnerNavigations,
+  getQueryValueByParam,
+  getCategoryUrlByCategoryId,
+};

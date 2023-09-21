@@ -1,5 +1,9 @@
 import { getCategories } from "./service.js";
-import { getTargetSegment, setCurrentInnerNavigations } from "./utils.js";
+import {
+  getCategoryUrlByCategoryId,
+  getTargetSegment,
+  setCurrentInnerNavigations,
+} from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   /*=============== TOGGLE MENU ===============*/
@@ -21,9 +25,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const categories = await getCategories();
     let result = "";
     categories.forEach((category) => {
+      const categoryUrl = getCategoryUrlByCategoryId(category.id);
       result += `
             <li class="nav__item">
-            <a href="#" class="nav__link">${category.name}</a>
+            <a href=${categoryUrl} class="nav__link">${category.name}</a>
           </li>
             `;
     });
