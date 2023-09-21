@@ -224,6 +224,7 @@ button:hover,
 .nav__left {
   display: flex;
   column-gap: 2rem;
+  justify-content: flex-start;
 }
 
 .nav__right {
