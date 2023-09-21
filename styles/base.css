@@ -316,6 +316,7 @@ main {
 
 .innerNavigation {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.7rem;
 }
 
@@ -330,4 +331,8 @@ main {
   color: var(--title-color);
   text-transform: capitalize;
   text-decoration: underline;
+}
+
+.innerNavigation__item-last {
+  color: var(--text-color);
 }

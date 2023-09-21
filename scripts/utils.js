@@ -29,6 +29,8 @@ function getNavigationHTML(innerNavigations) {
   //   let result = `<section class="section innerNavigation">Hello World</section>`;
   let result = "";
   innerNavigations.forEach((navigation, idx) => {
+    const activeInnerNavigation =
+      idx === innerNavigations.length - 1 ? "innerNavigation__item-last" : "";
     result += `
         <div class="innerNavigation__item">
             ${
@@ -36,7 +38,9 @@ function getNavigationHTML(innerNavigations) {
                 ? '<i class="ri-arrow-right-s-line innerNavigation__arrow"></i>'
                 : ""
             }
-            <a href=${navigation.url} class="innerNavigation__link">${
+            <a href=${
+              navigation.url
+            } class="innerNavigation__link ${activeInnerNavigation}">${
       navigation.navName
     }</a>
         </div>
