@@ -23,5 +23,5 @@ window.addEventListener("DOMContentLoaded", () => {
     productListEl.innerHTML = result;
   }
 
-  renderProducts();
+  // renderProducts();
 });
