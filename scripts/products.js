@@ -8,10 +8,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   async function renderProducts() {
     const products = await getProductsByCategoryId(categoryId);
-    console.log(products);
     let result = "";
     products.forEach((product) => {
-      console.log("product", product);
       result += `
       <a class="product__item" href="/pages/products/index.html?${PRODUCT_QUERY}=${product.id}">
         <img
@@ -22,9 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
       </a>
       `;
     });
-    console.log("previous:", productListEl.innerHTML);
     productListEl.innerHTML = result;
-    console.log("after", productListEl.innerHTML);
   }
 
   renderProducts();

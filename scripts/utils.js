@@ -51,7 +51,7 @@ function getCategoryUrlByCategoryId(categoryId) {
 }
 
 async function setCurrentInnerNavigations(targetSegment) {
-  let innerNavigations;
+  let innerNavigations = [];
   const categoriesUrl = `/pages/${CATEGORY_URL_SEGMENT}`;
   if (targetSegment === PRODUCTS_URL_SEGMENT) {
     const categoryId = getQueryValueByParam(CATEGORY_QUERY);
