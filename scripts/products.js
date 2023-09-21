@@ -11,10 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
     let result = "";
     products.forEach((product) => {
       result += `
-        <a
-          class="product__item"
-          href="/pages/product/index.html?productId=${product.id}"
-        >
+        <div class="product__item">
           <div class="product__showcase">
             <img
               src=${product.imageUrl}
@@ -23,10 +20,12 @@ window.addEventListener("DOMContentLoaded", () => {
             <i class="ri-shopping-cart-fill product__card-icon"></i>
           </div>
           <div class="product_subinfo">
-            <div class="product__name">${product.name}</div>
+            <div class="product__name">
+              <a class="product__link" href="/pages/product-details/index.html?${PRODUCT_QUERY}=${product.id}">${product.name}</a>
+            </div>
             <div class="product__price">${product.unitPrice}TK (${product.unit})</div>
           </div>
-        </a>
+        </div>
       `;
     });
     productListEl.innerHTML = result;

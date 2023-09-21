@@ -4,8 +4,9 @@ import {
   POSSIBLE_URL_SEGMENTS,
   PRODUCTS_URL_SEGMENT,
   PRODUCT_DETAILS_URL_SEGMENT,
+  PRODUCT_QUERY,
 } from "./constants.js";
-import { getCategoryById } from "./service.js";
+import { getCategoryById, getProductById } from "./service.js";
 
 function getTargetSegment() {
   const currentUrlProperties = new URL(document.location);
@@ -50,6 +51,11 @@ function getCategoryUrlByCategoryId(categoryId) {
   return categoryUrl;
 }
 
+function getProductUrlByProductId(productId) {
+  const productUrl = `/pages/${PRODUCT_DETAILS_URL_SEGMENT}/index.html?${PRODUCT_QUERY}=${productId}`;
+  return productUrl;
+}
+
 async function setCurrentInnerNavigations(targetSegment) {
   let innerNavigations = [];
   const categoriesUrl = `/pages/${CATEGORY_URL_SEGMENT}`;
@@ -76,6 +82,29 @@ async function setCurrentInnerNavigations(targetSegment) {
       },
     ];
   } else if (targetSegment === PRODUCT_DETAILS_URL_SEGMENT) {
+    const productId = getQueryValueByParam(PRODUCT_QUERY);
+    const productUrl = getProductUrlByProductId(productId);
+    const product = await getProductById(productId);
+    const productName = product.name;
+
+    const categoryId = product.categoryId;
+    const categoryUrl = getCategoryUrlByCategoryId(categoryId);
+    const category = await getCategoryById(categoryId);
+    const categoryName = category.name;
+    innerNavigations = [
+      {
+        navName: CATEGORY_URL_SEGMENT,
+        url: categoriesUrl,
+      },
+      {
+        navName: categoryName,
+        url: categoryUrl,
+      },
+      {
+        navName: productName,
+        url: productUrl,
+      },
+    ];
   }
   if (innerNavigations.length > 0) {
     const innerContainerEl = document.getElementById("inner-container");
