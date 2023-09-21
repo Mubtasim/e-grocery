@@ -11,17 +11,26 @@ window.addEventListener("DOMContentLoaded", () => {
     let result = "";
     products.forEach((product) => {
       result += `
-      <a class="product__item" href="/pages/products/index.html?${PRODUCT_QUERY}=${product.id}">
-        <img
-          src=${product.imageUrl}
-          class="product__image"
-        />
-        <div class="product__name">${product.name}</div>
-      </a>
+        <a
+          class="product__item"
+          href="/pages/product/index.html?productId=${product.id}"
+        >
+          <div class="product__showcase">
+            <img
+              src=${product.imageUrl}
+              class="product__image"
+            />
+            <i class="ri-shopping-cart-fill product__card-icon"></i>
+          </div>
+          <div class="product_subinfo">
+            <div class="product__name">${product.name}</div>
+            <div class="product__price">${product.unitPrice}TK (${product.unit})</div>
+          </div>
+        </a>
       `;
     });
     productListEl.innerHTML = result;
   }
 
-  // renderProducts();
+  renderProducts();
 });
