@@ -1,6 +1,6 @@
 import { PRODUCT_QUERY } from "./constants.js";
 import { getProductById } from "./service.js";
-import { getQueryValueByParam } from "./utils.js";
+import { addToCart, getQueryValueByParam } from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   const productDetailsEl = document.getElementById("product-details");

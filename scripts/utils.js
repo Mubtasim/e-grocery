@@ -117,9 +117,14 @@ async function setCurrentInnerNavigations(targetSegment) {
   }
 }
 
+function addToCart(productId) {
+  console.log("To be added product id", productId);
+}
+
 export {
   getTargetSegment,
   setCurrentInnerNavigations,
   getQueryValueByParam,
   getCategoryUrlByCategoryId,
+  addToCart,
 };
