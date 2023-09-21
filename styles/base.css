@@ -215,10 +215,31 @@ button:hover,
 .nav {
   height: var(--header-height);
   display: flex;
-  /* justify-content: space-between; */
-  column-gap: 2rem;
   align-items: center;
+  justify-content: space-between;
   box-shadow: -1px 0 16px hsla(0, 0%, 0%, 0.1);
+  width: 100%;
+}
+
+.nav__left {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav__right {
+  position: relative;
+}
+
+.cart__item-count {
+  position: absolute;
+  top: -0.6em;
+  right: 0.9em;
+  background-color: var(--first-color-alt);
+  padding: 0.05em 0.18em;
+  font-size: var(--smaller-font-size);
+  color: white;
+  border-radius: 0.3em;
+  font-weight: var(--font-semi-bold);
 }
 
 .nav__logo {
@@ -227,12 +248,16 @@ button:hover,
 }
 
 .nav__toggle,
-.nav__close {
+.nav__close,
+.cart {
   display: flex;
   font-size: 1.25rem;
   color: var(--title-color);
-  /* color: var(--first-color-alt); */
   cursor: pointer;
+}
+
+.cart {
+  text-align: right;
 }
 
 .nav__toggle {
