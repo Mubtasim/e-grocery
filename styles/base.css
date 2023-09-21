@@ -132,7 +132,7 @@ button,
 .button {
   border: hidden;
   outline: none;
-  border-radius: 1em;
+  border-radius: 0.4em;
   padding: 0.7em;
   transition: 0.05s;
   display: inline-block;
