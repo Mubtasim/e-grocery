@@ -261,6 +261,7 @@ button:hover,
 
 .nav__heading {
   font-weight: var(--font-medium);
+  text-transform: uppercase;
 }
 
 .nav__list {
@@ -278,6 +279,9 @@ button:hover,
   color: var(--title-color);
   text-transform: capitalize;
   font-size: var(--small-font-size);
+}
+
+.active {
   font-weight: var(--font-semi-bold);
 }
 

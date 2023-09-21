@@ -1,6 +1,8 @@
+import { CATEGORY_QUERY, PRODUCTS_URL_SEGMENT } from "./constants.js";
 import { getCategories } from "./service.js";
 import {
   getCategoryUrlByCategoryId,
+  getQueryValueByParam,
   getTargetSegment,
   setCurrentInnerNavigations,
 } from "./utils.js";
@@ -21,14 +23,23 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /*=============== RENDER NAV CATEGORIES ===============*/
   const navListEl = document.getElementById("nav-list");
+  const targetSegment = getTargetSegment();
   async function renderCategoriesNav() {
     const categories = await getCategories();
     let result = "";
     categories.forEach((category) => {
       const categoryUrl = getCategoryUrlByCategoryId(category.id);
+      const urlCategoryId = getQueryValueByParam(CATEGORY_QUERY);
+      let active = "";
+      if (
+        targetSegment === PRODUCTS_URL_SEGMENT &&
+        urlCategoryId === category.id
+      ) {
+        active = "active";
+      }
       result += `
             <li class="nav__item">
-            <a href=${categoryUrl} class="nav__link">${category.name}</a>
+            <a href=${categoryUrl} class="nav__link ${active}">${category.name}</a>
           </li>
             `;
     });
@@ -37,6 +48,5 @@ window.addEventListener("DOMContentLoaded", () => {
   renderCategoriesNav();
 
   /*=============== RENDER INNER NAVIGATIONS ===============*/
-  const targetSegment = getTargetSegment();
   setCurrentInnerNavigations(targetSegment);
 });
