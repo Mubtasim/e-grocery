@@ -37,6 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const addToCartToButtonEl = document.querySelector(
         `[data-id="${productId}"]`
       );
+      console.log("addToCartToButtonEl", addToCartToButtonEl);
       addToCartToButtonEl.addEventListener("click", () => {
         addToCart(products, productId);
       });
