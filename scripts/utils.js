@@ -163,6 +163,42 @@ function addToCart(allproducts, productId) {
   console.log(cart);
 }
 
+function renderCartItems(cart) {
+  const cartContentEl = document.getElementById("cart-content");
+  let result = "";
+  cart.forEach((cartItem) => {
+    console.log(cartItem);
+    const totalPrice = cartItem.amount * cartItem.unitPrice;
+    result += `
+      <div class="cart__item">
+        <div class="cart__item-counter">
+          <div class="cart__item-increase">
+            <i class="ri-arrow-up-line"></i>
+          </div>
+          <div class="cart__item-currentcount">${cartItem.amount}</div>
+          <div class="cart__item-decrease">
+            <i class="ri-arrow-down-line"></i>
+          </div>
+        </div>
+        <div class="cart__item-image">
+          <img
+            src=${cartItem.imageUrl}
+          />
+        </div>
+        <div class="cart__item-info">
+          <div class="cart__item-title">${cartItem.name}</div>
+          <div class="cart__item-subinfo">৳${cartItem.unitPrice} / ${cartItem.unit}</div>
+        </div>
+        <div class="cart__item-cost">৳ ${totalPrice}</div>
+        <div class="cart__item-delete">
+          <i class="ri-delete-bin-6-line"></i>
+        </div>
+      </div>
+    `;
+  });
+  cartContentEl.innerHTML = result;
+}
+
 export {
   getTargetSegment,
   setCurrentInnerNavigations,
@@ -171,4 +207,5 @@ export {
   addToCart,
   setCartItemCountInNav,
   getCart,
+  renderCartItems,
 };

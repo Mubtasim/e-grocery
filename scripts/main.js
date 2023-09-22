@@ -5,6 +5,7 @@ import {
   getCategoryUrlByCategoryId,
   getQueryValueByParam,
   getTargetSegment,
+  renderCartItems,
   setCartItemCountInNav,
   setCurrentInnerNavigations,
 } from "./utils.js";
@@ -55,4 +56,7 @@ window.addEventListener("DOMContentLoaded", () => {
   /*=============== SET CART ITEM COUNT IN NAV ===============*/
   let cart = getCart();
   setCartItemCountInNav(cart);
+
+  /*=============== RENDER CART ITEMS ===============*/
+  renderCartItems(cart);
 });

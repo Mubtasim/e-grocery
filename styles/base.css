@@ -419,20 +419,42 @@ main {
   color: var(--title-color);
 }
 
-.cart__item-image,
-.cart__item-delete,
-.cart__item-cost {
+.cart__item-title {
+  text-transform: capitalize;
+}
+
+.cart__item-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.cart__item-info,
-.cart__item-counter {
+.cart__item-cost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cart__item-delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cart__item-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.cart__item-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cart__item-subinfo {
