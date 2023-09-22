@@ -1,5 +1,5 @@
 import { CATEGORY_QUERY, PRODUCT_QUERY } from "./constants.js";
-import { getProducts, getProductsByCategoryId } from "./service.js";
+import { getProductsByCategoryId } from "./service.js";
 import { addToCart, getQueryValueByParam } from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -36,13 +36,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const addToCartButtons = document.querySelectorAll("i[data-id]");
 
     addToCartButtons.forEach((addToCartButton) => {
-      // const productId = addToCartButton.getAttribute("data-id");
       const productId = addToCartButton.dataset.id;
-      console.log(productId);
       const addToCartToButtonEl = document.querySelector(
         `[data-id="${productId}"]`
       );
-      // console.log("addToCartToButtonEll", addToCartToButtonEl);
       addToCartToButtonEl.addEventListener("click", () => {
         addToCart(products, productId);
       });
