@@ -32,16 +32,28 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const addToCartButtons = document.querySelectorAll("i[data-id]");
 
-    addToCartButtons.forEach((addToCartButton) => {
-      const productId = addToCartButton.getAttribute("data-id");
-      const addToCartToButtonEl = document.querySelector(
+    // addToCartButtons.forEach((addToCartButton) => {
+    //   // const productId = addToCartButton.getAttribute("data-id");
+    //   const productId = addToCartButton.dataset.id;
+    //   console.log(productId);
+    //   const addToCartToButtonEl = document.querySelector(
+    //     `[data-id="${productId}"]`
+    //   );
+    //   // console.log("addToCartToButtonEll", addToCartToButtonEl);
+    //   addToCartToButtonEl.addEventListener("click", () => {
+    //     addToCart(products, productId);
+    //   });
+    // });
+    for (let i = 0; i < addToCartButtons.length; i++) {
+      const addToCartButton = addToCartButtons[i];
+      const productId = addToCartButton.dataset.id;
+      const addToCartButtonEl = document.querySelector(
         `[data-id="${productId}"]`
       );
-      console.log("addToCartToButtonEll", addToCartToButtonEl);
-      addToCartToButtonEl.addEventListener("click", () => {
+      addToCartButtonEl.addEventListener("click", () => {
         addToCart(products, productId);
       });
-    });
+    }
   }
 
   renderProducts();
