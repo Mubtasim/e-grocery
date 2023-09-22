@@ -31,12 +31,10 @@ window.addEventListener("DOMContentLoaded", () => {
     productListEl.innerHTML = result;
 
     const addToCartButtons = [...document.querySelectorAll("i[data-id]")];
-    console.log(addToCartButtons);
 
     addToCartButtons.forEach((addToCartButton) => {
       const productId = addToCartButton.getAttribute("data-id");
       addToCartButton.addEventListener("click", () => {
-        console.log("Adding to cart");
         addToCart(products, productId);
       });
     });
