@@ -392,7 +392,7 @@ main {
 .cart__content {
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  overflow: auto;
 }
 
 .cart__item {
@@ -400,6 +400,16 @@ main {
   grid-template-columns: 1fr 4fr 6fr 4fr 1fr;
   font-size: var(--smaller-font-size);
   align-items: center;
+  border-bottom: 1px dashed var(--text-color-lighter);
+  padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+}
+
+.cart__item-counter,
+.cart__item-image,
+.cart__item-info,
+.cart__item-cost,
+.cart__item-delete {
+  padding: 0rem 0.3rem;
 }
 
 .cart__item-currentcount,
@@ -427,4 +437,11 @@ main {
 
 .cart__item-subinfo {
   font-size: var(--smallest-font-size);
+}
+
+.place__order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--smaller-font-size);
 }
