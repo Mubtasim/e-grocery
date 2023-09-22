@@ -117,8 +117,37 @@ async function setCurrentInnerNavigations(targetSegment) {
   }
 }
 
-function addToCart(productId) {
-  console.log("To be added product id", productId);
+function indexInCart(cart, productId) {
+  let index = -1;
+  cart.forEach((item, idx) => {
+    if (item.id === productId) index = idx;
+  });
+  return index;
+}
+
+function addToCart(allproducts, productId) {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  if (!cart) cart = [];
+
+  const productIdxInCart = indexInCart(cart, productId);
+
+  if (productIdxInCart >= 0) {
+    const currentProduct = cart[productIdxInCart];
+    const currentProductObj = {
+      ...currentProduct,
+      amount: currentProduct.amount + 1,
+    };
+    cart.push(currentProductObj);
+  } else {
+    const currentProduct = allproducts.find(
+      (product) => product.id === productId
+    );
+    const currentProductObj = { ...currentProduct, amount: 1 };
+    cart.push(currentProductObj);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  console.log(cart);
 }
 
 export {
