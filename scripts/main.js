@@ -1,9 +1,11 @@
 import { CATEGORY_QUERY, PRODUCTS_URL_SEGMENT } from "./constants.js";
 import { getCategories } from "./service.js";
 import {
+  getCart,
   getCategoryUrlByCategoryId,
   getQueryValueByParam,
   getTargetSegment,
+  setCartItemCountInNav,
   setCurrentInnerNavigations,
 } from "./utils.js";
 
@@ -49,4 +51,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /*=============== RENDER INNER NAVIGATIONS ===============*/
   setCurrentInnerNavigations(targetSegment);
+
+  /*=============== SET CART ITEM COUNT IN NAV ===============*/
+  let cart = getCart();
+  setCartItemCountInNav(cart);
 });
