@@ -30,7 +30,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const productListEl = document.getElementById("product-list");
     productListEl.innerHTML = result;
 
-    const addToCartButtons = document.querySelectorAll("i[data-id]");
+    const addToCartButtons = [...document.querySelectorAll("i[data-id]")];
+    console.log(addToCartButtons);
 
     addToCartButtons.forEach((addToCartButton) => {
       const productId = addToCartButton.getAttribute("data-id");
