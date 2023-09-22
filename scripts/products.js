@@ -29,32 +29,26 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     const productListEl = document.getElementById("product-list");
     productListEl.innerHTML = result;
+  }
 
+  async function setCartButtonsAction() {
+    const products = await getProductsByCategoryId(categoryId);
     const addToCartButtons = document.querySelectorAll("i[data-id]");
 
-    // addToCartButtons.forEach((addToCartButton) => {
-    //   // const productId = addToCartButton.getAttribute("data-id");
-    //   const productId = addToCartButton.dataset.id;
-    //   console.log(productId);
-    //   const addToCartToButtonEl = document.querySelector(
-    //     `[data-id="${productId}"]`
-    //   );
-    //   // console.log("addToCartToButtonEll", addToCartToButtonEl);
-    //   addToCartToButtonEl.addEventListener("click", () => {
-    //     addToCart(products, productId);
-    //   });
-    // });
-    for (let i = 0; i < addToCartButtons.length; i++) {
-      const addToCartButton = addToCartButtons[i];
+    addToCartButtons.forEach((addToCartButton) => {
+      // const productId = addToCartButton.getAttribute("data-id");
       const productId = addToCartButton.dataset.id;
-      const addToCartButtonEl = document.querySelector(
+      console.log(productId);
+      const addToCartToButtonEl = document.querySelector(
         `[data-id="${productId}"]`
       );
-      addToCartButtonEl.addEventListener("click", () => {
+      // console.log("addToCartToButtonEll", addToCartToButtonEl);
+      addToCartToButtonEl.addEventListener("click", () => {
         addToCart(products, productId);
       });
-    }
+    });
   }
 
   renderProducts();
+  setCartButtonsAction();
 });
