@@ -1,5 +1,5 @@
 import { PRODUCT_QUERY } from "./constants.js";
-import { getProductById } from "./service.js";
+import { getProductById, getProducts } from "./service.js";
 import { addToCart, getQueryValueByParam } from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="product__price">${product.unitPrice} TK (${product.unit})</div>
             <div class="product__description">${product.description}</div>
             <div class="product__cart-actions">
-                <button class="button product__cart-button addToCartButton">
+                <button class="button product__cart-button addToCartButton" id="add-to-cart-button">
                 <i class="ri-shopping-cart-fill"></i
                 ><span>Add to Cart</span>
                 </button>
@@ -30,6 +30,13 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
       productDetailsEl.innerHTML = result;
+
+      const allProducts = await getProducts();
+
+      const addToCartButtonEl = document.getElementById("add-to-cart-button");
+      addToCartButtonEl.addEventListener("click", () => {
+        addToCart(allProducts, productId);
+      });
     } catch (error) {
       console.log(error);
     }

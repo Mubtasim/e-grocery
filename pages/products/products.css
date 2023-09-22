@@ -29,6 +29,12 @@
   /* color: var(--title-color); */
   color: white;
   box-shadow: 0 0 1rem 0.5em hsla(0, 0%, 0%, 0.1);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.product__card-icon:hover {
+  transform: scale(1.1);
 }
 
 .product__image {

@@ -137,7 +137,7 @@ function addToCart(allproducts, productId) {
       ...currentProduct,
       amount: currentProduct.amount + 1,
     };
-    cart.push(currentProductObj);
+    cart[productIdxInCart] = currentProductObj;
   } else {
     const currentProduct = allproducts.find(
       (product) => product.id === productId
