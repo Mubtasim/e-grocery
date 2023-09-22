@@ -1,9 +1,8 @@
 import { CATEGORY_QUERY, PRODUCT_QUERY } from "./constants.js";
 import { getProducts, getProductsByCategoryId } from "./service.js";
-import { getQueryValueByParam } from "./utils.js";
+import { addToCart, getQueryValueByParam } from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-  const productListEl = document.getElementById("product-list");
   const categoryId = getQueryValueByParam(CATEGORY_QUERY);
 
   async function renderProducts() {
@@ -17,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
               src=${product.imageUrl}
               class="product__image"
             />
-            <i class="ri-shopping-cart-fill product__card-icon"></i>
+            <i class="ri-shopping-cart-fill product__card-icon" data-id=${product.id}></i>
           </div>
           <div class="product_subinfo">
             <div class="product__name">
@@ -28,7 +27,17 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
     });
+    const productListEl = document.getElementById("product-list");
     productListEl.innerHTML = result;
+
+    const addToCartButtons = document.querySelectorAll("i[data-id]");
+
+    addToCartButtons.forEach((addToCartButton) => {
+      const productId = addToCartButton.getAttribute("data-id");
+      addToCartButton.addEventListener("click", () => {
+        addToCart(products, productId);
+      });
+    });
   }
 
   renderProducts();
