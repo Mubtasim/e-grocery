@@ -366,18 +366,22 @@ main {
 
 .cart {
   position: fixed;
-  right: 0;
+  right: -100%;
   top: 0;
   background-color: var(--body-color);
   box-shadow: 0 20px 16px hsla(0, 0%, 0%, 0.1);
   width: var(--menu-width);
   height: calc(100% - var(--header-height));
   padding: 1rem 1rem;
-  transition: left 0.4s;
+  transition: right 0.4s;
   margin-top: var(--header-height);
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+}
+
+.show__cart {
+  right: 0;
 }
 
 .cart__top {

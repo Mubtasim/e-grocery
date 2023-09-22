@@ -59,4 +59,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /*=============== RENDER CART ITEMS ===============*/
   renderCartItems(cart);
+
+  /*=============== CART TOGGLE ===============*/
+  const cartEl = document.getElementById("cart");
+
+  const cartCloseButtonEl = document.getElementById("cart-close-button");
+  cartCloseButtonEl.addEventListener("click", () => {
+    cartEl.classList.remove("show__cart");
+  });
+
+  const cartIconEl = document.getElementById("cart-icon");
+  cartIconEl.addEventListener("click", () => {
+    cartEl.classList.toggle("show__cart");
+  });
 });
