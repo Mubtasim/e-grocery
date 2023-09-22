@@ -34,8 +34,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
     addToCartButtons.forEach((addToCartButton) => {
       const productId = addToCartButton.getAttribute("data-id");
-      console.log("adding event listener to cart buttons");
       addToCartButton.addEventListener("click", () => {
+        console.log("Adding to cart");
         addToCart(products, productId);
       });
     });
