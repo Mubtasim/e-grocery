@@ -1,0 +1,33 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.checkout__back {
+  width: fit-content;
+}
+
+.checkout__content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1rem;
+}
+
+.shipping__address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.shipping__address-title {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.shipping__address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
