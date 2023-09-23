@@ -250,6 +250,10 @@ button:hover,
   position: relative;
 }
 
+.nav__right-disable {
+  display: none;
+}
+
 .cart__item-count {
   position: absolute;
   top: -0.6em;
