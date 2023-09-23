@@ -122,11 +122,21 @@ img {
 }
 
 input {
-  padding: 0.5rem;
+  padding: 0.8rem 0.5rem;
   border-radius: 0.3rem;
   border: none;
   outline: none;
   background-color: var(--input-color);
+  width: 100%;
+}
+
+input::placeholder {
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+input:focus {
+  outline: 0.5px solid var(--text-color);
 }
 
 button,
@@ -144,6 +154,14 @@ button,
   align-items: center;
   justify-content: space-between;
   column-gap: 0.5rem;
+}
+
+.button-inline {
+  display: inline-block;
+}
+
+.button-sm {
+  font-size: var(--smaller-font-size);
 }
 
 button:active,
@@ -487,4 +505,38 @@ main {
   align-items: center;
   justify-content: center;
   font-size: var(--smaller-font-size);
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.checkout__back {
+  width: fit-content;
+}
+
+.checkout__content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1rem;
+}
+
+.shipping__address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.shipping__address-title {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.shipping__address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
