@@ -237,6 +237,9 @@ function setCartDecreaseButtonActions() {
 
 function renderCartItems(cart) {
   const cartContentEl = document.getElementById("cart-content");
+  const itemTopCountEl = document.getElementById("item-top-count");
+  itemTopCountEl.innerHTML = `${cart.length} item${cart.length > 1 ? "s" : ""}`;
+
   let result = "";
   cart.forEach((cartItem) => {
     console.log(cartItem);
