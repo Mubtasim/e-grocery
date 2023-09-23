@@ -255,3 +255,9 @@
     grid-template-columns: 3fr 2fr;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .order__successful {
+    padding: 2rem 1rem;
+  }
+}
