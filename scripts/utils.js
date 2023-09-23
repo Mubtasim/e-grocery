@@ -180,13 +180,35 @@ function deleteFromCart(productId) {
   updateCartAcross(cart);
 }
 
-async function setCartDeleteButtonActions() {
-  const cart = getCart();
+function setCartDeleteButtonActions() {
   const cartDeleteButtonsEls = document.querySelectorAll("div[data-idCart]");
   cartDeleteButtonsEls.forEach((deleteBtnEl) => {
     const productId = deleteBtnEl.dataset.idcart;
     deleteBtnEl.addEventListener("click", () => {
       deleteFromCart(productId);
+    });
+  });
+}
+
+function updateCartAcrossCheckout(cart) {
+  updateLocalStorageCart(cart);
+  renderCheckoutCartItem(cart);
+}
+
+function deleteFromCheckoutCart(productId) {
+  let cart = getCart();
+  cart = cart.filter((item) => item.id !== productId);
+  updateCartAcrossCheckout(cart);
+}
+
+function setCheckoutCartDeleteButtonActions() {
+  const checkoutCartDeleteButtonsEls = document.querySelectorAll(
+    "div[data-checkoutIdCart]"
+  );
+  checkoutCartDeleteButtonsEls.forEach((deleteBtnEl) => {
+    const productId = deleteBtnEl.dataset.checkoutidcart;
+    deleteBtnEl.addEventListener("click", () => {
+      deleteFromCheckoutCart(productId);
     });
   });
 }
@@ -200,6 +222,14 @@ function increaseCartItem(productId) {
   updateCartAcross(cart);
 }
 
+function checkoutIncreaseCartItem(productId) {
+  let cart = getCart();
+  const index = indexInCart(cart, productId);
+  if (index < 0) return;
+  cart[index].amount += 1;
+  updateCartAcrossCheckout(cart);
+}
+
 function decreaseCartItem(productId) {
   let cart = getCart();
 
@@ -211,6 +241,16 @@ function decreaseCartItem(productId) {
   }
 }
 
+function checkoutDecreaseCartItem(productId) {
+  let cart = getCart();
+  const index = indexInCart(cart, productId);
+  if (index < 0) return;
+  if (cart[index].amount > 1) {
+    cart[index].amount -= 1;
+    updateCartAcrossCheckout(cart);
+  }
+}
+
 function setCartIncreaseButtonActions() {
   const cartIncreaseButtonEls = document.querySelectorAll(
     "div[data-cartIncrease]"
@@ -219,6 +259,30 @@ function setCartIncreaseButtonActions() {
     const productId = increaseBtnEl.dataset.cartincrease;
     increaseBtnEl.addEventListener("click", () => {
       increaseCartItem(productId);
+    });
+  });
+}
+
+function setCheckoutCartIncreaseButtonActions() {
+  const checkoutCartIncreaseButtonEls = document.querySelectorAll(
+    "div[data-checkoutCartIncrease]"
+  );
+  checkoutCartIncreaseButtonEls.forEach((increaseBtnEl) => {
+    const productId = increaseBtnEl.dataset.checkoutcartincrease;
+    increaseBtnEl.addEventListener("click", () => {
+      checkoutIncreaseCartItem(productId);
+    });
+  });
+}
+
+function setCheckoutCartDecreaseButtonActions() {
+  const checkoutCartDecreaseButtonEls = document.querySelectorAll(
+    "div[data-checkoutCartDecrease]"
+  );
+  checkoutCartDecreaseButtonEls.forEach((decreaseBtnEl) => {
+    const productId = decreaseBtnEl.dataset.checkoutcartdecrease;
+    decreaseBtnEl.addEventListener("click", () => {
+      checkoutDecreaseCartItem(productId);
     });
   });
 }
@@ -235,6 +299,57 @@ function setCartDecreaseButtonActions() {
   });
 }
 
+function renderCheckoutCartItem(cart) {
+  const checkoutCartContentEl = document.getElementById("checkout-cart-items");
+  let result = "";
+  cart.forEach((cartItem) => {
+    const totalPrice = cartItem.amount * cartItem.unitPrice;
+    result += `
+      <div class="checkout__cart-item">
+        <div class="checkout__cart-item-counter">
+          <div
+            class="checkout__cart-item-increase"
+            data-checkoutCartIncrease=${cartItem.id}
+          >
+            <i class="ri-arrow-up-line"></i>
+          </div>
+          <div class="checkout__cart-item-currentcount">${cartItem.amount}</div>
+          <div
+            class="checkout__cart-item-decrease"
+            data-checkoutCartDecrease=${cartItem.id}
+          >
+            <i class="ri-arrow-down-line"></i>
+          </div>
+        </div>
+        <div class="checkout__cart-item-image">
+          <img
+            src=${cartItem.imageUrl}
+          />
+        </div>
+        <div class="checkout__cart-item-info">
+          <div class="checkout__cart-item-title">
+            ${cartItem.name}
+          </div>
+          <div class="checkout__cart-item-subinfo">
+            ৳${cartItem.unitPrice} / ${cartItem.unit}
+          </div>
+        </div>
+        <div class="checkout__cart-item-cost">৳ ${totalPrice}</div>
+        <div
+          class="checkout__cart-item-delete"
+          data-checkoutIdCart=${cartItem.id}
+        >
+          <i class="ri-delete-bin-6-line"></i>
+        </div>
+      </div>
+    `;
+  });
+  checkoutCartContentEl.innerHTML = result;
+  setCheckoutCartDeleteButtonActions();
+  setCheckoutCartIncreaseButtonActions();
+  setCheckoutCartDecreaseButtonActions();
+}
+
 function renderCartItems(cart) {
   const cartContentEl = document.getElementById("cart-content");
   const itemTopCountEl = document.getElementById("item-top-count");
@@ -242,7 +357,6 @@ function renderCartItems(cart) {
 
   let result = "";
   cart.forEach((cartItem) => {
-    console.log(cartItem);
     const totalPrice = cartItem.amount * cartItem.unitPrice;
     result += `
       <div class="cart__item">
@@ -286,4 +400,5 @@ export {
   setCartItemCountInNav,
   getCart,
   renderCartItems,
+  renderCheckoutCartItem,
 };

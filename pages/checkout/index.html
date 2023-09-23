@@ -59,7 +59,7 @@
           <div class="section__content">
             <div class="checkout" id="checkout">
               <a
-                class="checkout__back button button-inline button-sm"
+                class="checkout__back button button-outline button-inline button-sm"
                 href="/pages/categories"
               >
                 <i class="ri-arrow-left-line"></i> Back to shopping
@@ -73,11 +73,63 @@
                       name="fullName"
                       placeholder="Full Name"
                     />
+                    <input
+                      type="text"
+                      name="phone"
+                      placeholder="Phone Number"
+                    />
+                    <input type="text" name="address" placeholder="Address" />
+                    <input type="text" name="city" placeholder="Town/City" />
+                    <input type="text" name="zip" placeholder="Zip Code" />
+                    <button class="button checkout__button">Place Order</button>
                   </div>
                 </div>
                 <div class="checkout__info">
-                  <div class="checkout__cart">Cart Items</div>
-                  <div class="checkout__order-summary">Order Summary</div>
+                  <div class="checkout__cart">
+                    <div class="cart__items-title">Cart Items</div>
+                    <div class="checkout__cart-items" id="checkout-cart-items">
+                      <!-- <div class="checkout__cart-item">
+                        <div class="checkout__cart-item-counter">
+                          <div
+                            class="checkout__cart-item-increase"
+                            data-checkoutCartIncrease="1"
+                          >
+                            <i class="ri-arrow-up-line"></i>
+                          </div>
+                          <div class="checkout__cart-item-currentcount">5</div>
+                          <div
+                            class="checkout__cart-item-decrease"
+                            data-checkoutCartDecrease="1"
+                          >
+                            <i class="ri-arrow-down-line"></i>
+                          </div>
+                        </div>
+                        <div class="checkout__cart-item-image">
+                          <img
+                            src="https://chaldn.com/_mpimage/chaldal-premium-mrigel-fish-headless-30-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D127446&q=best&v=1&m=400&webp=1"
+                          />
+                        </div>
+                        <div class="checkout__cart-item-info">
+                          <div class="checkout__cart-item-title">
+                            premium mrigel fish
+                          </div>
+                          <div class="checkout__cart-item-subinfo">
+                            ৳269 / 500 gm
+                          </div>
+                        </div>
+                        <div class="checkout__cart-item-cost">৳ 2167</div>
+                        <div
+                          class="checkout__cart-item-delete"
+                          data-checkoutIdCart="1"
+                        >
+                          <i class="ri-delete-bin-6-line"></i>
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+                  <div class="checkout__order-summary">
+                    <div class="order__summary-title">Order Summary</div>
+                  </div>
                 </div>
               </div>
             </div>
