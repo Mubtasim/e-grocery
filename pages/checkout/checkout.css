@@ -207,23 +207,30 @@
 
 .order__successful {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--body-color);
-  box-shadow: 0 0 300rem 300rem var(--first-color-lighter);
+  top: 0;
+  left: 0;
+  background-color: transparent;
   z-index: var(--z-fixed);
-  max-width: 20rem;
-  border-radius: 1em;
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.order__successful-modal {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: fit-content;
-  height: fit-content;
-  padding: 3rem;
-  gap: 1rem;
   text-align: center;
+  padding: 3rem;
+  max-width: 20rem;
+  background-color: var(--body-color);
+  box-shadow: 0 0 1rem 1rem var(--text-color-lighter);
+  border-radius: 1em;
+  gap: 1rem;
 }
 
 .order-successful-show {

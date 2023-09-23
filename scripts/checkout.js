@@ -16,6 +16,8 @@ window.addEventListener("DOMContentLoaded", () => {
   );
   checkoutPlaceOrderButtonEl.addEventListener("click", () => {
     const orderSuccessfulEl = document.getElementById("order-successfull");
+    const mainEl = document.getElementById("main");
+    mainEl.remove();
     orderSuccessfulEl.classList.add("order-successful-show");
     clearCartFromStorage();
   });
