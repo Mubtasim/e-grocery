@@ -81,7 +81,12 @@
                     <input type="text" name="address" placeholder="Address" />
                     <input type="text" name="city" placeholder="Town/City" />
                     <input type="text" name="zip" placeholder="Zip Code" />
-                    <button class="button checkout__button">Place Order</button>
+                    <button
+                      class="button checkout__button"
+                      id="checkout-place-order-button"
+                    >
+                      Place Order
+                    </button>
                   </div>
                 </div>
                 <div class="checkout__info">
@@ -136,7 +141,7 @@
                           class="order__summary-value"
                           id="order-summary-subtotal"
                         >
-                          450 TK
+                          0 TK
                         </div>
                       </div>
                       <div class="order__summary-subinfo">
@@ -157,7 +162,7 @@
                           class="order__summary-value costTotalValue"
                           id="order-summary-total"
                         >
-                          450 TK
+                          0 TK
                         </div>
                       </div>
                     </div>
@@ -167,6 +172,16 @@
             </div>
           </div>
         </section>
+      </div>
+      <div class="order__successful" id="order-successfull">
+        <i class="ri-checkbox-circle-fill order__successful-icon"></i>
+        <div class="order__successful-title">Your order has been placed</div>
+        <div class="order__successful-subtitle">
+          We will send you a notification within 2 days when it ships.
+        </div>
+        <a href="/pages/categories" class="button button-sm"
+          ><i class="ri-arrow-left-line"></i> Back to Shopping</a
+        >
       </div>
     </main>
 

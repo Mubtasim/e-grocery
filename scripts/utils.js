@@ -412,6 +412,10 @@ function renderCartItems(cart) {
   setCartDecreaseButtonActions();
 }
 
+function clearCartFromStorage() {
+  localStorage.setItem("cart", JSON.stringify([]));
+}
+
 export {
   getTargetSegment,
   setCurrentInnerNavigations,
@@ -422,4 +426,5 @@ export {
   getCart,
   renderCartItems,
   renderCheckoutCartItem,
+  clearCartFromStorage,
 };
