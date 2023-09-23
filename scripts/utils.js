@@ -168,13 +168,16 @@ function updateLocalStorageCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function deleteFromCart(productId) {
-  let cart = getCart();
-
-  cart = cart.filter((item) => item.id !== productId);
+function updateCartAcross(cart) {
   updateLocalStorageCart(cart);
   setCartItemCountInNav(cart);
   renderCartItems(cart);
+}
+
+function deleteFromCart(productId) {
+  let cart = getCart();
+  cart = cart.filter((item) => item.id !== productId);
+  updateCartAcross(cart);
 }
 
 async function setCartDeleteButtonActions() {
@@ -188,6 +191,50 @@ async function setCartDeleteButtonActions() {
   });
 }
 
+function increaseCartItem(productId) {
+  let cart = getCart();
+
+  const index = indexInCart(cart, productId);
+  if (index < 0) return;
+  cart[index].amount += 1;
+  updateCartAcross(cart);
+}
+
+function decreaseCartItem(productId) {
+  let cart = getCart();
+
+  const index = indexInCart(cart, productId);
+  if (index < 0) return;
+  if (cart[index].amount > 1) {
+    cart[index].amount -= 1;
+    updateCartAcross(cart);
+  }
+}
+
+function setCartIncreaseButtonActions() {
+  const cartIncreaseButtonEls = document.querySelectorAll(
+    "div[data-cartIncrease]"
+  );
+  cartIncreaseButtonEls.forEach((increaseBtnEl) => {
+    const productId = increaseBtnEl.dataset.cartincrease;
+    increaseBtnEl.addEventListener("click", () => {
+      increaseCartItem(productId);
+    });
+  });
+}
+
+function setCartDecreaseButtonActions() {
+  const cartDecreaseButtonEls = document.querySelectorAll(
+    "div[data-cartDecrease]"
+  );
+  cartDecreaseButtonEls.forEach((decreaseBtnEl) => {
+    const productId = decreaseBtnEl.dataset.cartdecrease;
+    decreaseBtnEl.addEventListener("click", () => {
+      decreaseCartItem(productId);
+    });
+  });
+}
+
 function renderCartItems(cart) {
   const cartContentEl = document.getElementById("cart-content");
   let result = "";
@@ -197,11 +244,11 @@ function renderCartItems(cart) {
     result += `
       <div class="cart__item">
         <div class="cart__item-counter">
-          <div class="cart__item-increase">
+          <div class="cart__item-increase" data-cartIncrease=${cartItem.id}>
             <i class="ri-arrow-up-line"></i>
           </div>
           <div class="cart__item-currentcount">${cartItem.amount}</div>
-          <div class="cart__item-decrease">
+          <div class="cart__item-decrease"  data-cartDecrease=${cartItem.id}>
             <i class="ri-arrow-down-line"></i>
           </div>
         </div>
@@ -223,6 +270,8 @@ function renderCartItems(cart) {
   });
   cartContentEl.innerHTML = result;
   setCartDeleteButtonActions();
+  setCartIncreaseButtonActions();
+  setCartDecreaseButtonActions();
 }
 
 export {
