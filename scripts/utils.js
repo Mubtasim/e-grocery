@@ -163,6 +163,30 @@ function addToCart(allproducts, productId) {
   console.log(cart);
 }
 
+function updateLocalStorageCart(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function deleteFromCart(productId) {
+  let cart = getCart();
+
+  cart = cart.filter((item) => item.id !== productId);
+  updateLocalStorageCart(cart);
+  setCartItemCountInNav(cart);
+  renderCartItems(cart);
+}
+
+async function setCartDeleteButtonActions() {
+  const cart = getCart();
+  const cartDeleteButtonsEls = document.querySelectorAll("div[data-idCart]");
+  cartDeleteButtonsEls.forEach((deleteBtnEl) => {
+    const productId = deleteBtnEl.dataset.idcart;
+    deleteBtnEl.addEventListener("click", () => {
+      deleteFromCart(productId);
+    });
+  });
+}
+
 function renderCartItems(cart) {
   const cartContentEl = document.getElementById("cart-content");
   let result = "";
@@ -190,13 +214,14 @@ function renderCartItems(cart) {
           <div class="cart__item-subinfo">৳${cartItem.unitPrice} / ${cartItem.unit}</div>
         </div>
         <div class="cart__item-cost">৳ ${totalPrice}</div>
-        <div class="cart__item-delete">
+        <div class="cart__item-delete" data-idCart=${cartItem.id}>
           <i class="ri-delete-bin-6-line"></i>
         </div>
       </div>
     `;
   });
   cartContentEl.innerHTML = result;
+  setCartDeleteButtonActions();
 }
 
 export {
