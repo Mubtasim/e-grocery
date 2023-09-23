@@ -156,9 +156,10 @@ function addToCart(allproducts, productId) {
     cart.push(currentProductObj);
   }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
-
   setCartItemCountInNav(cart);
+  renderCartItems(cart);
+
+  localStorage.setItem("cart", JSON.stringify(cart));
 
   console.log(cart);
 }

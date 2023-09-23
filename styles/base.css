@@ -380,6 +380,10 @@ main {
   row-gap: 1rem;
 }
 
+.cart__close-button {
+  cursor: pointer;
+}
+
 .show__cart {
   right: 0;
 }
@@ -421,6 +425,19 @@ main {
 .cart__item-cost,
 .cart__item-delete {
   color: var(--title-color);
+}
+
+.cart__item-increase,
+.cart__item-decrease,
+.cart__item-delete {
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.cart__item-increase:hover,
+.cart__item-decrease:hover,
+.cart__item-delete:hover {
+  transform: scale(1.05);
 }
 
 .cart__item-title {
