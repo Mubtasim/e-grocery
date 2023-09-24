@@ -416,6 +416,23 @@ function clearCartFromStorage() {
   localStorage.setItem("cart", JSON.stringify([]));
 }
 
+function showMessage(message, type) {
+  let typeClass = "notification-success";
+  if (type === "error") typeClass = "notification-error";
+
+  const showClass = "notification-show";
+  const notificationEl = document.getElementById("notification");
+
+  notificationEl.innerHTML = message;
+
+  notificationEl.classList.add(typeClass);
+  notificationEl.classList.add(showClass);
+
+  setTimeout(() => {
+    notificationEl.classList.remove(showClass);
+  }, 1300);
+}
+
 export {
   getTargetSegment,
   setCurrentInnerNavigations,
@@ -427,4 +444,5 @@ export {
   renderCartItems,
   renderCheckoutCartItem,
   clearCartFromStorage,
+  showMessage,
 };

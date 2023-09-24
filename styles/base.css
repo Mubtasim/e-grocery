@@ -526,3 +526,28 @@ main {
   justify-content: center;
   font-size: var(--smaller-font-size);
 }
+
+.notification {
+  position: fixed;
+  top: 5rem;
+  right: -100%;
+  background-color: var(--first-color-alt);
+  color: white;
+  padding: 0.7em;
+  border-radius: 0.3em;
+  z-index: var(--z-fixed);
+  font-size: var(--small-font-size);
+  transition: 0.3s right;
+}
+
+.notification-show {
+  right: 0.3rem;
+}
+
+.notification-success {
+  background-color: var(--first-color-alt);
+}
+
+.notification-error {
+  background-color: rgb(255, 86, 48);
+}

@@ -2,6 +2,7 @@ import {
   clearCartFromStorage,
   getCart,
   renderCheckoutCartItem,
+  showMessage,
 } from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -15,6 +16,11 @@ window.addEventListener("DOMContentLoaded", () => {
     "checkout-place-order-button"
   );
   checkoutPlaceOrderButtonEl.addEventListener("click", () => {
+    let cart = getCart();
+    if (cart.length < 1) {
+      showMessage("Cart is empty", "error");
+      return;
+    }
     const orderSuccessfulEl = document.getElementById("order-successfull");
     const mainEl = document.getElementById("main");
     mainEl.remove();
