@@ -9,6 +9,7 @@ You can access the live website at [https://mubtasim-e-grocery.netlify.app/](htt
 ## Table of Contents
 
 - [Features](#features)
+- [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
 
 ## Features
@@ -18,6 +19,11 @@ You can access the live website at [https://mubtasim-e-grocery.netlify.app/](htt
 - Add items to your cart and proceed to checkout.
 - Responsive design for both desktop and mobile devices.
 - Place orders and receive confirmation.
+
+## Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Deployment**: Netlify
 
 ## Getting Started
 
