@@ -8,6 +8,7 @@ import {
   renderCartItems,
   setCartItemCountInNav,
   setCurrentInnerNavigations,
+  showMessage,
 } from "./utils.js";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -71,5 +72,16 @@ window.addEventListener("DOMContentLoaded", () => {
   const navRightCartEl = document.getElementById("nav-right");
   navRightCartEl.addEventListener("click", () => {
     cartEl.classList.toggle("show__cart");
+  });
+
+  const placeOrderNavCartEl = document.getElementById("place-order-nav-cart");
+  placeOrderNavCartEl.addEventListener("click", (e) => {
+    e.preventDefault();
+    let cart = getCart();
+    if (cart.length < 1) {
+      showMessage("Cart is empty", "error");
+      return;
+    }
+    document.location.href = "/pages/checkout";
   });
 });
