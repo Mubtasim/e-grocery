@@ -68,8 +68,8 @@ window.addEventListener("DOMContentLoaded", () => {
     cartEl.classList.remove("show__cart");
   });
 
-  const cartIconEl = document.getElementById("cart-icon");
-  cartIconEl.addEventListener("click", () => {
+  const navRightCartEl = document.getElementById("nav-right");
+  navRightCartEl.addEventListener("click", () => {
     cartEl.classList.toggle("show__cart");
   });
 });
