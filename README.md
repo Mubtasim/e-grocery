@@ -28,3 +28,11 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/mubtasim/e-grocery.git
    ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd e-grocery
+   ```
+
+3. Open the index.html file in your preferred web browser.
