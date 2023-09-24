@@ -43,5 +43,104 @@
     "categoryId": "2",
     "description": "Mrigel is a carp fish. Its one of the popular fish after Rui fish. It is different for its sweet taste and has Avery unique flavour. Chaldal is offering Best Mrigel cultured with healthy and safe farming practise. In this pack we are offering Medium Sized Mrigel fish which 2000gm to 2500 gm weight while its live. Each pack is 500gm which contains 7 to 11 pieces of fish steak. All of our fishes are processed by our experts and washed with clean water.",
     "imageUrl": "https://chaldn.com/_mpimage/chaldal-premium-mrigel-fish-headless-30-gm-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D127446&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "6",
+    "name": "Banana Chompa",
+    "unit": "4 pcs",
+    "unitPrice": 25,
+    "categoryId": "1",
+    "description": "",
+    "imageUrl": "https://chaldn.com/_mpimage/banana-chompa-ready-to-eat-4-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D116416&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "7",
+    "name": "Malta",
+    "unit": "1 kg",
+    "unitPrice": 297,
+    "categoryId": "1",
+    "description": "Every 1 kg of the product will contain 5pcs-6pcs of Malta. Malta, a variety of orange, is a popular citrus fruit cultivated in hot climate. The fruit is rich in mineral salts and other ingredients of nutritive value such as iron, lime, phosphorus, and vital minerals. Malta is loaded with vitamin C and vitamin B complex. It is a round-shaped, medium-sized fruit, weighting an average of 145.8 gm. It has a rough-surfaced orange ringed with a segment of around 9.67 centimeters and a sweet-tasting juice content of around 33.7 per cent. The fruit is often used to make processed juice, jam, jelly and marmalade",
+    "imageUrl": "https://chaldn.com/_mpimage/malta-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D131779&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "8",
+    "name": "Guava Premium",
+    "unit": "1 kg",
+    "unitPrice": 83,
+    "categoryId": "1",
+    "description": "Every 1 kg of the product will contain 3pcs-4pcs of Guava. Guava is a tropical fruit rich in high-profile nutrients. Thai guavas are generally the size of a softball with apple green skin that can range from bumpy to smooth. The flesh is white with pale yellow seeds and tends to be drier than the pink type of guavas. Thai guavas are only mildly sweet and have very little fragrance. The crunchy flesh and hard seeds are both edible. Guavas come in two broad groups divided by the color of their flesh: pink and white. Thai guavas are a group of guavas within the white category that include a number of varieties. Thai Guava Guava is very helpful for those who want to lose weight without compromising their intake of proteins, vitamins and fiber. Guava is very high in roughage and rich in vitamins, proteins and minerals Adding a medium-sized guava to your lunch and you will not feel hungry again until the evening.",
+    "imageUrl": "https://chaldn.com/_mpimage/guava-premium-50-gm-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D67818&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "9",
+    "name": "Rupchanda Fortified Soyabean Oil",
+    "unit": "5 ltr",
+    "unitPrice": 825,
+    "categoryId": "3",
+    "description": "First Vitamin A fortified Soyabean Oil. Increases immunity. Strengthens bone & teeth.",
+    "imageUrl": "https://chaldn.com/_mpimage/rupchanda-fortified-soyabean-oil-5-ltr?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D137237&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "10",
+    "name": "Radhuni Pure Mustard Oil",
+    "unit": "500 ml",
+    "unitPrice": 180,
+    "categoryId": "3",
+    "description": "Radhuni Pure Mustard Oil is manufactured from the finest grade of indigenous mustard seeds and purified in fully automated plant.",
+    "imageUrl": "https://chaldn.com/_mpimage/radhuni-pure-mustard-oil-500-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D132550&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "11",
+    "name": "Pran Hot Tomato Sauce",
+    "unit": "1 kg",
+    "unitPrice": 180,
+    "categoryId": "4",
+    "description": "Radhuni Pure Mustard Oil is manufactured from the finest grade of indigenous mustard seeds and purified in fully automated plant.",
+    "imageUrl": "https://chaldn.com/_mpimage/pran-hot-tomato-sauce-1-kg?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D141997&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "12",
+    "name": "Starship Milk Powder",
+    "unit": "500 gm",
+    "unitPrice": 380,
+    "categoryId": "5",
+    "description": "Introducing Starship Milk Powder, a versatile and nutritious dairy product conveniently packaged in a 500 gm container. This milk powder offers a convenient solution for incorporating the goodness of milk into your daily routine, whether for drinking, cooking, or baking. Starship Milk Powder is a nutritional powerhouse crafted from high-quality milk that has been carefully processed into a powder form. This preservation method retains the essential nutrients found in milk, including calcium, protein, and vitamins, making it a valuable addition to a balanced diet.",
+    "imageUrl": "https://chaldn.com/_mpimage/starship-milk-powder-500-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D135324&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "13",
+    "name": "Kinder Joy (Boys)",
+    "unit": "20 gm",
+    "unitPrice": 80,
+    "categoryId": "6",
+    "description": "Kinder Joy is a delicious treat that comes with a surprise toy. It presents a yummy and entertaining world for kids, while delivering a reassuring and emotional experience to parents. This unique treat comes in a well-designed portion size, which has a dual taste of milky cream made of high quality cows milk and yummy cocoa cream with two crunchy wafer bites filled with cocoa cream. The surprise toys come in a wide range and can be assembled, hence feeding the kid's longing for surprise and play.",
+    "imageUrl": "https://chaldn.com/_mpimage/kinder-joy-boys-20-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D109796&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "14",
+    "name": "Mr. Noodles Korean Super Spicy",
+    "unit": "248 gm",
+    "unitPrice": 95,
+    "categoryId": "7",
+    "description": "",
+    "imageUrl": "https://chaldn.com/_mpimage/mr-noodles-korean-super-spicy-248-gm?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D130937&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "15",
+    "name": "Sprite Can (Imported)",
+    "unit": "320 ml",
+    "unitPrice": 269,
+    "categoryId": "8",
+    "description": "Crisp, refreshing and clean-tasting, Sprite is the world’s leading lemon and lime-flavoured soft drink. Ingredients: Carbonated Water, Sugar, Citric Acid, Malic Acid, Acidity Regulator (Sodium Gluconate), Natural Lemon-Lime Flavourings, Sweetener (Steviol Glycosides).",
+    "imageUrl": "https://chaldn.com/_mpimage/sprite-can-imported-320-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D70041&q=best&v=1&m=400&webp=1"
+  },
+  {
+    "id": "16",
+    "name": "Big Stainless Steel Fork",
+    "unit": "6 pcs",
+    "unitPrice": 265,
+    "categoryId": "9",
+    "description": "",
+    "imageUrl": "https://chaldn.com/_mpimage/big-stainless-steel-fork-6-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D125770&q=best&v=1&m=400&webp=1"
   }
 ]
